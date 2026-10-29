@@ -8,9 +8,9 @@ Run:  python start.py 1
 # but a bar of pure copper stays hard until one exact temperature. Why do mixtures of metals
 # (alloys) melt over a range of temperatures? A *phase diagram* is the map that answers this.
 #
-# **Plan.** (1) draw a simple Cu-Ni style map of liquid, mushy and solid, (2) ask which phase we are
-# in at a composition and temperature, (3) cool a melt at a steady rate and watch the
-# cooling curve. The pure metal shows a flat stop (an arrest); the alloy only bends.
+# **Plan.** (1) draw a simple Cu-Ni style map of liquid, mushy and solid regions, (2) determine which phase is
+# present at a given composition and temperature, (3) cool a melt at a steady rate and observe the
+# cooling curve. The pure metal shows a flat thermal arrest; the alloy displays a continuous bend.
 #
 # **Important.** The diagram here is a simplified *illustration*: it uses straight lines between
 # the well-known melting points (Cu 1085 C, Ni 1455 C) and is not the measured Cu-Ni diagram.
@@ -23,14 +23,14 @@ import numpy as np
 OUT = (pathlib.Path(__file__).resolve().parent if "__file__" in globals() else pathlib.Path(".")) / "out"
 
 T_CU, T_NI = 1085.0, 1455.0                 # melting points of pure Cu and pure Ni, degrees C
-# composition x = weight percent Ni. Illustrative lens: straight-line pieces through three points.
+# composition x = weight percent Ni. Illustrative model: straight-line pieces through three points.
 X_NODES = np.array([0.0, 50.0, 100.0])
 LIQ_NODES = np.array([T_CU, 1320.0, T_NI])   # liquidus: above this the alloy is fully liquid
 SOL_NODES = np.array([T_CU, 1240.0, T_NI])   # solidus: below this the alloy is fully solid
 
 C_HEAT = 0.5      # specific heat, J/(g K), the same for all phases (simplification)
 L_HEAT = 200.0    # latent heat of freezing, J/g (illustrative)
-Q_OUT = 2.0       # heat taken out of the metal, W/g (steady)
+Q_OUT = 2.0       # heat removal rate per gram, W/g (steady)
 
 
 # %% [markdown]
