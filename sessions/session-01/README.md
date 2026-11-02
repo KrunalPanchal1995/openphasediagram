@@ -20,16 +20,16 @@
 A bar of pure copper stays hard until one exact temperature and then melts. The solder in a plumber's kit goes soft and pasty first and only later runs like water. A phase diagram is the map that tells you which state an alloy is in at every temperature and composition. How do we read it, and how does it show up when a melt cools?
 
 ## B. Concept and theory
-A phase is a uniform region of material, here liquid or solid. The diagram has composition across (weight percent of metal B) and temperature up. The liquidus is the line above which the alloy is all liquid; the solidus is the line below which it is all solid. Between them lies a two-phase band where liquid and solid coexist, the mush. Pure metals sit at the two edges where the lines meet, so they melt at one temperature. When heat is taken out of a melt at a steady rate, the temperature falls steadily in the liquid; while the metal freezes it gives up latent heat (the heat released on freezing), so the curve flattens. A pure metal holds a flat arrest; an alloy only bends. Here the heat content per gram is H = c T + L (1 - f), where f is the fraction frozen, and time = heat removed divided by the heat-removal rate.
+A phase is a uniform region of material, here liquid or solid. The diagram plots composition on the horizontal axis (weight percent of nickel, metal B) and temperature on the vertical axis. The liquidus is the line above which the alloy is completely liquid; the solidus is the line below which it is completely solid. Between them lies a two-phase band where liquid and solid coexist, known as the mushy zone. Pure metals sit at the two outer edges (0 wt% and 100 wt% Ni) where the liquidus and solidus meet, which is why pure metals melt at a single fixed temperature. When heat is taken out of a melt at a steady rate, the temperature falls steadily in the liquid; while the metal freezes it gives up latent heat (the heat released during freezing), so the cooling curve flattens. A pure metal displays a flat thermal arrest; an alloy only bends. Here the heat content per gram is H = c T + L (1 - f), where f is the fraction frozen, and time = heat removed divided by the heat removal rate.
 
 | Symbol | Meaning | Unit |
 |---|---|---|
 | x | composition: weight percent Ni | wt% |
-| T | temperature | C |
-| T_L, T_S | liquidus and solidus temperatures | C |
+| T | temperature | °C |
+| T_L, T_S | liquidus and solidus temperatures | °C |
 | c | specific heat (0.5 here, illustrative) | J/(g K) |
 | L | latent heat of freezing (200 here, illustrative) | J/g |
-| Q | heat removed per gram (2 here) | W/g |
+| Q | heat removal rate per gram (2 here) | W/g |
 | f | fraction frozen (linear between liquidus and solidus in this session) | no unit |
 
 **Assumptions**
@@ -50,13 +50,13 @@ $$ \text{arrest of a pure metal}=\dfrac{L}{Q} $$
 ## C. Visual explanation
 The first figure is the simplified diagram: orange liquid on top, a blue band of liquid + solid and grey solid below, with the liquidus and solidus meeting at the two pure metals. The second figure shows two cooling curves for the same heat loss. Pure copper falls, sits flat at 1085 C for 100 s while it freezes, then falls again. The 50 wt% Ni alloy begins freezing at 1320 C and finishes at 1240 C, and in between it cools more slowly (about 0.67 K/s instead of 4 K/s) with no flat part.
 
-![Pure copper holds a flat arrest; the 50 wt% Ni alloy only bends.](../../docs/figures/s01_cooling_curves.png)
-
-*Pure copper holds a flat arrest; the 50 wt% Ni alloy only bends.*
-
 ![Illustrative Cu-Ni style diagram: liquid, a two-phase band and solid.](../../docs/figures/s01_simple_diagram.png)
 
 *Illustrative Cu-Ni style diagram: liquid, a two-phase band and solid.*
+
+![Pure copper holds a flat arrest; the 50 wt% Ni alloy only bends.](../../docs/figures/s01_cooling_curves.png)
+
+*Pure copper holds a flat arrest; the 50 wt% Ni alloy only bends.*
 
 ## D. Interactive simulation
 Run the lesson (`python start.py 1`), then open the live app: [Session 1: where is the alloy, and how does it cool?](https://krunalpanchal1995.github.io/openphasediagram/session-01/) (or `app.html` in this folder). Move the composition and temperature sliders and watch which region the point falls in. Then open the cooling-curve view and compare a pure metal (0 wt% Ni) with a 50 wt% alloy.
