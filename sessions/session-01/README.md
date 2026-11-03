@@ -1,6 +1,6 @@
 # Session 1: A pure metal melts at a point, an alloy over a range
 
-[Session 1 — हिन्दी](README.hi.md) · [Session 1 — മലയാളം](README.ml.md)
+[Session 1 — हिन्दी](README.hi.md) · [Session 1 — മലയാളം](README.ml.md) · [Session 1 — தமிழ்](README.ta.md)
 
 *Level 1 (conceptual interactive model) · about 60 minutes · openphasediagram*
 
